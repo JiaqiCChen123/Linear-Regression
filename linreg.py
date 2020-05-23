@@ -43,20 +43,6 @@ def log_likelihood(X, y, B,lmbda):
     # return (-1)*sum(list_temp)
     return -np.sum(y*np.dot(X,B) - np.log(1 + np.exp(np.dot(X,B))))
 
-# NOT REQUIRED but to try to implement for fun
-def  L1_log_likelihood(X, y, B, lmbda):
-    pass
-
-# NOT REQUIRED but to try to implement for fun
-def L1_log_likelihood_gradient(X, y, B, lmbda):
-    """
-    Must compute \beta_0 differently from \beta_i for i=1..p.
-    \beta_0 is just the usual log-likelihood gradient
-    # See https://aimotion.blogspot.com/2011/11/machine-learning-with-python-logistic.html
-    # See https://stackoverflow.com/questions/38853370/matlab-regularized-logistic-regression-how-to-compute-gradient
-    """
-    pass
-
 def minimize(X, y, loss, loss_gradient,
               eta=0.00001, lmbda=0.0,
               max_iter=1000, addB0=True,
@@ -161,7 +147,3 @@ class LogisticRegression:
                            self.lmbda,
                            self.max_iter,addB0=True)
         
-
-# NOT REQUIRED but to try to implement for fun
-# class LassoLogistic:
-#     pass  
