@@ -94,7 +94,7 @@ def minimize(X, y, loss, loss_gradient,
         return np.insert(final_B,0,np.mean(y),axis=0)
     
 
-class LinearRegression621:
+class LinearRegression:
     def __init__(self,
                  eta=0.00001, lmbda=0.0,
                  max_iter=1000):
@@ -116,7 +116,7 @@ class LinearRegression621:
                            self.lmbda,
                            self.max_iter)
 
-class RidgeRegression621:
+class RidgeRegression:
     def __init__(self,
                 eta=0.00001, lmbda=0.0,
                 max_iter=1000):
@@ -138,7 +138,7 @@ class RidgeRegression621:
                             self.lmbda,
                             self.max_iter,addB0=False)
 
-class LogisticRegression621:
+class LogisticRegression:
     def __init__(self,
                  eta=0.00001, lmbda=0.0,
                  max_iter=1000):
@@ -163,5 +163,5 @@ class LogisticRegression621:
         
 
 # NOT REQUIRED but to try to implement for fun
-# class LassoLogistic621:
+# class LassoLogistic:
 #     pass  
